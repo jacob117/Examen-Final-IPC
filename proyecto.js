@@ -16,9 +16,6 @@ do {
   let casado_50 = 0.3 // 30%
   
   let hijos_recargo = 0.2 // 20%
-  let propiedad_recargo = 0.35 // 20%
-  let sueldo_recargo = 0.05 // 20%
-
   
   //Recargo
   let recargo = 0
@@ -30,16 +27,6 @@ do {
 //Mensajes de alerta para ingresar datos 
 let nombre = prompt("Ingrese su nombre, por favor")
 let edad = prompt("¿Cuantos años tiene? Ingrese solamente números")
-
-  let sueldo = prompt("Ingrese su salario")
-  let sueldo_numero = parseInt(sueldo)
-
-let propiedad = prompt("¿Tiene Propiedades?", "si/no")
-let Cantidad_prodiedad =0
-if("SI" == propiedad.toUpperCase()){
-  Cantidad_prodiedad = prompt("¿Cuantas propiedades tiene? Ingrese solamente números")
-  Cantidad_prodiedad = parseInt(Cantidad_prodiedad)
-}
 
 let casado = prompt("¿Está casado actualmente?", "si/no")
 //Comprobamos la edad del cónyuge, solamente si se está casado/a
@@ -123,17 +110,6 @@ if(edad_conyuge_numero>=50){
   recargo_total = recargo_total + recargo 
  }
 
- if (Cantidad_prodiedad > 0){
-  recargo = precio_base * (propiedad_recargo * Cantidad_prodiedad)
-  //Sumamos todos los recargos que hemos obtenido
-  recargo_total = recargo_total + recargo 
- }
-
- if (sueldo_numero > 0){
-  recargo = (sueldo_recargo * sueldo_numero)
-  //Sumamos todos los recargos que hemos obtenido
-  recargo_total = recargo_total + recargo 
- }
 
 precio_final = precio_base + recargo_total
 //Resultado
