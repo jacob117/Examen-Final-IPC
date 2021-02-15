@@ -1,0 +1,13 @@
+Algoritmo para realizar el calculo de recargo
+
+
+Debe ingresar el nombre de asegurado
+De ahi debe ingresar la edad del asegurado
+Despues debe ingresar el salario del asegurado
+Despues se pregunta si tiene propiedades si la respuesta es si, se ingresa la cantidad de propiedades. Si la respuesta es no se pasa a la siguiente pregunta.
+Despues se pregunta si esta casado si la respuesta es si, se ingresa la edad del conyuge. Si la respuesta es no se pasa a la siguiente pregunta.
+Despues se pregunta si tienen hijos si la respuesta es si se ingresa la cantidad de hijos. Si la respuesta es no se pasa a la siguiente pregunta.
+Despues se pregunta si desea realizar otra cotizacion si la respuesta es si vuelve a inciar. Si escribe salir finaliza la cotizacion.
+
+
+

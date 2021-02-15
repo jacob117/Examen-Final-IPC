@@ -1,0 +1,9 @@
+Analasis del requerimiento
+
+La empresa de seguros TK-U desea realizar mas eficientemente la creacion de cotizacion de seguros
+a sus posibles clientes/asegurados.
+
+El problema actualemente es que la empresa utiliza cotizaciones fisicas y en caso que haya un error, el cliente desea cambiar algo despues de llenar
+el formulario o el empleado se equivoque se tiene que hacer de nuevo la cotizacion.
+
+Los casos para cambiar el valor es dinamico ya que el sistema detecta que valor es el que tiene que ingresar.
