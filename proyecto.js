@@ -30,29 +30,33 @@ let edad = prompt("¿Cuantos años tiene? Ingrese solamente números")
 
 let casado = prompt("¿Está casado actualmente?", "si/no")
 //Comprobamos la edad del cónyuge, solamente si se está casado/a
+if("SI" == casado.toUpperCase()){
 let edad_conyuge
 //convirtiendo las edades ingresadas a números 
-let edad_numero = parseInt(edad)
+
 let edad_conyuge_numero = 0
-if("SI" == casado.toUpperCase()){
+
   edad_conyuge = prompt("¿Que edad tiene su esposo/a? Ingrese solamente números")
   //convirtiendo la edad del cónyuge si se esta casado/a
   edad_conyuge_numero = parseInt(edad_conyuge)
+  
 }
 
 let hijos = prompt("¿Tiene hijos o hijas?", "si/no")
 //Comprobamos la cantidad de hijos solamente si los tienen
+if("SI" == hijos.toUpperCase()){
 let cantidad_hijos
 let cantidad_hijos_Numero = 0
 /**
  * 1. convierta la cantidad de hijos a numero
  */
-if("SI" == hijos.toUpperCase()){
+
   cantidad_hijos = prompt("¿Cuantos hijos tiene? Ingrese solamente números")
   //convirtiendo la edad del cónyuge si se esta casado/a
   cantidad_hijos_Numero = parseInt(cantidad_hijos)
 }
 
+let edad_numero = parseInt(edad)
 //Aquí debe calcular el recargo total basado en las respuestas ingresadas
 
 //Aquí es donde debe de calcular los recargos y el valor final
@@ -80,7 +84,7 @@ if(edad_numero>=50){
 /** 
  * 2. Recargo por la edad del conyuge
  */
-
+if("SI" == casado.toUpperCase()){
 if(edad_conyuge_numero>=18 && edad_conyuge_numero<25){
   //Calculamos el recargo en base a la edad 
   recargo = precio_base * casado_18
@@ -99,22 +103,25 @@ if(edad_conyuge_numero>=50){
   //Sumamos todos los recargos que hemos obtenido
   recargo_total = recargo_total + recargo
 }
-
+}
 /**
  * 3. Recargo por la cantidad de hijos 
  */ 
-
+if("SI" == hijos.toUpperCase()){
  if (cantidad_hijos_Numero > 0){
   recargo = precio_base * (hijos_recargo * cantidad_hijos)
   //Sumamos todos los recargos que hemos obtenido
   recargo_total = recargo_total + recargo 
  }
-
+}
 
 precio_final = precio_base + recargo_total
 //Resultado
 
-document.write("Para el asegurado "+nombre + "<br> El recargo total sera de: "+recargo_total + " <br>El precio sera de: "+ precio_final +"<br>")
+document.write("Para el asegurado "+nombre )
+document.write("El recargo total sera de: "+recargo_total )
+document.write("El precio sera de: "+ precio_final)
+
 
 let Resultado = prompt("Desea finalizar las cotizaciones", "si/salir")
 if("SALIR" == Resultado.toUpperCase()){  
